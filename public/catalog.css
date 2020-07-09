@@ -49,8 +49,8 @@ body {
 
 .-mku {
   text-align: left;
-  width: calc(95% / 5);
-  margin: calc(5% / 10);
+  width: calc(95% / 4);
+  margin: calc(5% / 8);
   text-decoration: none;
   color: black;
   background-color: white;
@@ -62,7 +62,7 @@ body {
 
 .-mku:hover {
   color: black !important;
-  box-shadow: 0 0 12px 0 rgba(0,0,0,0.12)
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.12)
 }
 
 .-mku::before {
@@ -174,10 +174,40 @@ body {
   visibility: visible
 }
 
+ .-thumbnails {
+  width: 60%;
+}
+ .-pane {
+  width: 40%;
+}
+ .-pane iframe {
+  border: none;
+  width: 100%;
+  min-height: 315px;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   
+ .-pane {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+ .-pane iframe {
+  border: none;
+  width: 100%;
+  min-height: unset;
+  height: 56.25vw;
+}
+ .-thumbnails,
+ .-pane {
+  width: 100%;
+} 
   .-mku {
     width: calc(95% / 2);
     margin: calc(5% / 4);
   }
 }
+
