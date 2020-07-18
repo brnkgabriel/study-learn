@@ -8,14 +8,10 @@ class Catalog {
     this.keyValDelimeter = '='
 
     this.data = [
-      "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|image=OverviewTheBibleProject.jpg|imagetoken=d4ed4886-c07c-4e76-b165-a6b466fe11a5|type=Comic",
-      "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProject.jpg|imagetoken=dde0df75-ff63-4bb0-8fc1-4f5007cc1cee|type=Comic",
-      "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProject.jpg|imagetoken=d7278a1e-24ee-4f91-b74f-7266cadf7b6f|type=Comic",
-      "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|image=Exodus1To18TheBibleProject.jpg|imagetoken=ff1d386b-ff3d-41f6-a82f-484b31612802|type=Comic",
-      "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|image=OverviewTheBibleProject.jpg|imagetoken=d4ed4886-c07c-4e76-b165-a6b466fe11a5|type=Comic",
-      "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProject.jpg|imagetoken=dde0df75-ff63-4bb0-8fc1-4f5007cc1cee|type=Comic",
-      "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProject.jpg|imagetoken=d7278a1e-24ee-4f91-b74f-7266cadf7b6f|type=Comic",
-      "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|image=Exodus1To18TheBibleProject.jpg|imagetoken=ff1d386b-ff3d-41f6-a82f-484b31612802|type=Comic",
+      "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|image=OverviewTheBibleProjectSquare.jpg|imagetoken=eac14a93-bbc7-4db9-a5ce-aff0a1b971da|type=Comic",
+      "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProjectSquare.jpg|imagetoken=fb0b7e55-1e5c-4779-a576-13383b4134de|type=Comic",
+      "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProjectSquare.jpg|imagetoken=2fdeb7e0-d716-4d7c-b2ec-ee29408ce5c5|type=Comic",
+      "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|image=Exodus1To18TheBibleProjectSquare.jpg|imagetoken=04c02a8b-6976-4d79-8c9d-a4e5ce403a22|type=Comic",
     ]
 
     this.hosts = {
@@ -56,7 +52,7 @@ class Catalog {
         <div class="-details">
           <div class="-name">${datum.name}</div>
           <div class="-desc">${datum.desc}</div>
-          <div class="-author">by ${datum.author}</div>
+          <div class="-author">${datum.author}</div>
         </div>
         <div class="-cta">preview</div>
       </div>`

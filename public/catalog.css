@@ -78,7 +78,12 @@ body {
 }
 
 .-mku .-img {
-  width: 100%
+  width: 100%;
+  max-width: 167px;
+  height: 167px;
+  background: url('https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/placeholder.jpg?alt=media&token=4ba1c972-1e7c-4c84-9e67-d1bec5fdf53d') no-repeat center hsl(0,0%,80%);
+  background-size: contain;
+  background-position: center center;
 }
 
 .-mku .-img .-shadow span {
@@ -120,6 +125,7 @@ body {
 
 .-mku .-details {
   padding: 10px;
+  padding-bottom: unset;
 }
 
 .-mku .-name {
@@ -127,13 +133,13 @@ body {
   line-height: 1;
 }
 
-.-mku .-desc {
-  font-size: .8em
+.-mku .-desc,
+.-mku .-author {
+  font-size: .75em
 }
 
 .-mku .-author {
   line-height: 1;
-  font-size: 0.8em;
   margin-top: 5px;
   color: gray;
 }
@@ -167,7 +173,9 @@ body {
   font-size: .9em;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   border-radius: 4px;
-  visibility: hidden
+  visibility: hidden;
+  width: calc(100% - 20px);
+  margin: 10px auto;
 }
 
 .-mku:hover .-cta {
@@ -193,6 +201,10 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
+}
+
+.-mku .-cta {
+  display: none;
 }
 
  .-pane iframe {
