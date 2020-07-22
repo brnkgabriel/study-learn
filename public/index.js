@@ -20,6 +20,7 @@ class Catalog {
 
     this.thumbnails = document.querySelector('.-thumbnails')
     this.youTubeIframe = document.querySelector('.-pane iframe')
+    this.pane = document.querySelector('.-pane')
   }
 
   replacePattern(pattern, str) {
@@ -54,7 +55,9 @@ class Catalog {
           <div class="-desc">${datum.desc}</div>
           <div class="-author">${datum.author}</div>
         </div>
-        <div class="-cta">preview</div>
+        <div class="-ctas">
+          <div class="-cta -material">material</div><div class="-cta -exercise">exercise</div>
+        </div>
       </div>`
     })
     this.thumbnails.innerHTML = html
@@ -64,9 +67,27 @@ class Catalog {
   appendListeners() {
     var mkus = document.querySelectorAll('.-mku')
     mkus.forEach(mku => {
-      mku.addEventListener('click', () => { this.changeYouTubeVideo(mku) })
+      this.ctaListener(mku)
+      // mku.addEventListener('click', () => { this.changeYouTubeVideo(mku) })
     })
     return this
+  }
+
+  ctaListener(mku) {
+    var ctas = mku.querySelectorAll('.-cta')
+    ctas.forEach(cta => {
+      cta.addEventListener('click', () => { this.changeContent(cta, mku) })
+    })
+  }
+
+  changeContent(cta, mku) {
+    var className = cta.classList[1]
+    var fn = this.pane.classList
+    if (className === '-exercise') fn.add('active')
+    else {
+      fn.remove('active')
+      this.changeYouTubeVideo(mku)
+    }
   }
 
   changeYouTubeVideo(mku) {
