@@ -95,7 +95,6 @@ body {
   position: relative;
   border-radius: 5px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.12);
-  cursor: pointer;
 }
 
 .-mku:hover {
@@ -118,10 +117,13 @@ body {
 .-mku .-img {
   width: 100%;
   max-width: 167px;
-  height: 167px;
-  background: url('https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/placeholder.jpg?alt=media&token=4ba1c972-1e7c-4c84-9e67-d1bec5fdf53d') no-repeat center hsl(0,0%,80%);
+  height: 94px;
+  background: url('https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/placeholder-rectangle.jpg?alt=media&token=2545a561-a995-4ff5-b870-7a15dab9cb22') no-repeat center hsl(0,0%,80%);
   background-size: contain;
   background-position: center center;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .-mku .-img .-shadow span {
@@ -136,10 +138,14 @@ body {
 }
 
 .-mku .-img img {
-  width: 100%;
+  width: 110%;
   display: block;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .-mku .-mask {
@@ -194,11 +200,12 @@ body {
   left: 5px;
   color: white;
   background-color: rgba(0,0,0,0.5);
-  padding: 5px 8px;
+  padding: 3px 5px;
   line-height: 1;
   font-size: 0.7em;
   font-weight: 600;
   border-radius: 3px;
+  z-index: 1;
 }
 
 
@@ -246,6 +253,7 @@ body {
   transform: translateY(-50%);
   top: 50%;
   left: 0%;
+  background-color: white;
 }
 
 .-pane .-exercise {
@@ -304,7 +312,7 @@ body {
 
   .-mku .-img {
     max-width: 150px;
-    height: 150px;
+    height: 84px;
   }
   .-pane {
     height: 56.25vw;

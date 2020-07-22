@@ -12,6 +12,10 @@ class Catalog {
       "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProjectSquare.jpg|imagetoken=fb0b7e55-1e5c-4779-a576-13383b4134de|type=Comic",
       "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProjectSquare.jpg|imagetoken=2fdeb7e0-d716-4d7c-b2ec-ee29408ce5c5|type=Comic",
       "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|image=Exodus1To18TheBibleProjectSquare.jpg|imagetoken=04c02a8b-6976-4d79-8c9d-a4e5ce403a22|type=Comic",
+      "name=Exodus 19-40|desc=Old Testament|author=The Bible Project|host=YouTube|id=oNpTha80yyE|image=Exodus19To40TheBibleProjectSquare.jpg|imagetoken=d28a7232-5b60-482e-8aa9-ce82ccf2f349|type=Comic",
+      "name=Leviticus|desc=Old Testament|author=The Bible Project|host=YouTube|id=IJ-FekWUZzE|image=LeviticusSquare.jpg|imagetoken=bc353ac8-3f55-4f34-9145-2c40ef450011|type=Comic",
+      "name=Numbers|desc=Old Testament|author=The Bible Project|host=YouTube|id=tp5MIrMZFqo|image=NumbersSquare.jpg|imagetoken=ae691344-ce85-4041-b898-59566f279d7f|type=Comic",
+      "name=Deuteronomy|desc=Old Testament|author=The Bible Project|host=YouTube|id=q5QEH9bH8AU|image=DeuteronomySquare.jpg|imagetoken=8139cc1a-8bc7-480c-9377-8c7ecd1c6e3b|type=Comic",
     ]
 
     this.hosts = {
@@ -40,14 +44,12 @@ class Catalog {
     var html = ''
     this.expand().map(datum => {
       var identifier = `${datum.name} ${datum.desc} ${datum.author}`
-      var src = `${this.imageUrl}${datum.image}?alt=media&token=${datum.imagetoken}`
+      // var src = `${this.imageUrl}${datum.image}?alt=media&token=${datum.imagetoken}`
+      var src = `https://img.youtube.com/vi/${datum.id}/0.jpg`
 
       html += `<div class="-mku -inlineblock -vatop -posrel" id="${this.id(identifier)}" data-id="${datum.id}">
         <div class="-img -posrel">
           <span class="-posabs -type">${datum.type}</span>
-          <span class="-posabs -host">
-            <img src="${this.hosts[datum.host.toLowerCase()]}" alt="${datum.host}"/>
-          </span>
           <img data-src="${src}" src="${src}"  alt="${identifier}" />
         </div>
         <div class="-details">
