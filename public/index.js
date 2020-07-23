@@ -1,6 +1,7 @@
 
 // this.youtubethumbnail = 'https://img.youtube.com/vi/<insert-youtube-video-id-here>/0.jpg'
 // youTubeIframeSource = https://www.youtube.com/embed/<insert-youtube-video-id-here>
+// thumbnail size: 480 x 270px
 class Catalog {
   constructor() {
     this.iframeUrl = 'https://www.youtube.com/embed/sjF2S7pMXNk'
@@ -8,6 +9,8 @@ class Catalog {
     this.keyValDelimeter = '='
 
     this.data = [
+      "name=In the Beginning|desc=Old Testament|author=Superbook|host=YouTube|id=fn-wEOpPsMo|image=|imagetoken=|type=Animation",
+      "name=In the Beginning|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=6cvA9nIRy5A|image=|imagetoken=|type=Animation",
       "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|image=OverviewTheBibleProjectSquare.jpg|imagetoken=eac14a93-bbc7-4db9-a5ce-aff0a1b971da|type=Comic",
       "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProjectSquare.jpg|imagetoken=fb0b7e55-1e5c-4779-a576-13383b4134de|type=Comic",
       "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProjectSquare.jpg|imagetoken=2fdeb7e0-d716-4d7c-b2ec-ee29408ce5c5|type=Comic",

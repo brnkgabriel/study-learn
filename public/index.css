@@ -51,6 +51,10 @@ body {
 
 .-banner {
   margin-top: unset;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
 
 .-banner .-txt {
@@ -87,8 +91,8 @@ body {
 
 .-mku {
   text-align: left;
-  width: calc(95% / 4);
-  margin: calc(5% / 8);
+  width: calc(90% / 5);
+  margin: calc(10% / 10);
   text-decoration: none;
   color: black;
   background-color: white;
@@ -116,8 +120,9 @@ body {
 
 .-mku .-img {
   width: 100%;
-  max-width: 167px;
-  height: 94px;
+  max-width: 210px;
+  height: 9.2vw;
+  max-height: 118px;
   background: url('https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/placeholder-rectangle.jpg?alt=media&token=2545a561-a995-4ff5-b870-7a15dab9cb22') no-repeat center hsl(0,0%,80%);
   background-size: contain;
   background-position: center center;
@@ -162,14 +167,17 @@ body {
 
 .-mku .-name,
 .-mku .-desc {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden
 }
 
 .-mku .-details {
   padding: 10px;
   padding-bottom: unset;
+}
+
+.-mku .-details div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
 }
 
 .-mku .-name {
@@ -228,6 +236,7 @@ body {
   font-size: .7em;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .-mku .-ctas .-cta:active {
@@ -235,25 +244,26 @@ body {
 }
 
  .-thumbnails {
-  width: 60%;
-  text-align: center;
+  text-align: left;
 }
  .-pane {
-  width: 40%;
-  max-width: 468px;
-  height: 315px;
   overflow: hidden;
+  width: 30.3%;
+  max-width: 355px;
+  height: 100%;
+  max-height: 200px;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0%;
+  left: 50%;
 }
 
 .-pane iframe,
 .-pane .-exercise {
   border: none;
+  background-color: white;
   width: 100%;
   height: 100%;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0%;
-  background-color: white;
 }
 
 .-pane .-exercise {
@@ -268,8 +278,11 @@ body {
   left: 0%;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 480px) {
-  
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .-container {
+    width: 100%;
+    max-width: 480px;
+  }
   .-banner .-txt {
     color: white;
     right: unset;
@@ -283,7 +296,6 @@ body {
     padding: 10px;
     background-color: rgba(0,0,0,0.6);
   }
-
 
   .-banner .-txt .-head {
     font-weight: 600;
@@ -303,29 +315,21 @@ body {
     padding-bottom: 10px;
   }
 
-  .-pane {
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    left: 0;
-  }
-
   .-mku .-img {
-    max-width: 150px;
-    height: 84px;
+    max-width: unset;
+    width: 100%;
+    height: 26.25vw;
+    max-height: 139px;
   }
-  .-pane {
-    height: 56.25vw;
-  }
-  
   .-thumbnails,
   .-pane {
     width: 100%;
+    max-width: 480px;
   } 
   .-mku {
     width: calc(95% / 2);
     margin: calc(5% / 4);
-    max-width: 150px;
+    /* max-width: 150px; */
+    max-width: unset;
   }
 }
-
