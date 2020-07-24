@@ -1,32 +1,84 @@
 
 // this.youtubethumbnail = 'https://img.youtube.com/vi/<insert-youtube-video-id-here>/0.jpg'
 // youTubeIframeSource = https://www.youtube.com/embed/<insert-youtube-video-id-here>
+// pdfthumbnail = 
+// googleDrivePDFSource = https://drive.google.com/file/d/1T-SrgO3Z_uzczLDxIj7MTa5UzaU2g2wO/preview
 // thumbnail size: 480 x 270px
 class Catalog {
   constructor() {
     this.iframeUrl = 'https://www.youtube.com/embed/sjF2S7pMXNk'
     this.imageUrl = 'https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/'
     this.keyValDelimeter = '='
+    this.youTube = 'YouTube'
+    this.pdf = 'PDF'
 
     this.data = [
-      "name=In the Beginning|desc=Old Testament|author=Superbook|host=YouTube|id=fn-wEOpPsMo|image=|imagetoken=|type=Animation",
-      "name=In the Beginning|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=6cvA9nIRy5A|image=|imagetoken=|type=Animation",
-      "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|image=OverviewTheBibleProjectSquare.jpg|imagetoken=eac14a93-bbc7-4db9-a5ce-aff0a1b971da|type=Comic",
-      "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|image=Genesis1To11TheBibleProjectSquare.jpg|imagetoken=fb0b7e55-1e5c-4779-a576-13383b4134de|type=Comic",
-      "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|image=Genesis12To50TheBibleProjectSquare.jpg|imagetoken=2fdeb7e0-d716-4d7c-b2ec-ee29408ce5c5|type=Comic",
-      "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|image=Exodus1To18TheBibleProjectSquare.jpg|imagetoken=04c02a8b-6976-4d79-8c9d-a4e5ce403a22|type=Comic",
-      "name=Exodus 19-40|desc=Old Testament|author=The Bible Project|host=YouTube|id=oNpTha80yyE|image=Exodus19To40TheBibleProjectSquare.jpg|imagetoken=d28a7232-5b60-482e-8aa9-ce82ccf2f349|type=Comic",
-      "name=Leviticus|desc=Old Testament|author=The Bible Project|host=YouTube|id=IJ-FekWUZzE|image=LeviticusSquare.jpg|imagetoken=bc353ac8-3f55-4f34-9145-2c40ef450011|type=Comic",
-      "name=Numbers|desc=Old Testament|author=The Bible Project|host=YouTube|id=tp5MIrMZFqo|image=NumbersSquare.jpg|imagetoken=ae691344-ce85-4041-b898-59566f279d7f|type=Comic",
-      "name=Deuteronomy|desc=Old Testament|author=The Bible Project|host=YouTube|id=q5QEH9bH8AU|image=DeuteronomySquare.jpg|imagetoken=8139cc1a-8bc7-480c-9377-8c7ecd1c6e3b|type=Comic",
+      "name=In the Beginning|desc=Old Testament|author=Superbook|host=YouTube|id=fn-wEOpPsMo|type=Animation|image=",
+      "name=Abraham|desc=Old Testament|author=Superbook|host=YouTube|id=xAFMg09bido|type=Animation|image=",
+      "name=Jacob & Esau|desc=Old Testament|author=Superbook|host=YouTube|id=zhykNXjGQuA|type=Animation|image=",
+      "name=The Exodus|desc=Old Testament|author=Superbook|host=YouTube|id=H98zaq803Tg|type=Animation|image=",
+      "name=The 10 Commandments|desc=Old Testament|author=Superbook|host=YouTube|id=VtWfiTXO1Ts|type=Animation|image=",
+      "name=David - Giant Adventure|desc=Old Testament|author=Superbook|host=YouTube|id=jdMq3YAfmO0|type=Animation|image=",
+      "name=Daniel - Roar|desc=Old Testament|author=Superbook|host=YouTube|id=5UNBtaVsWm4|type=Animation|image=",
+      "name=The First Christmas|desc=New Testament|author=Superbook|host=YouTube|id=1fl9laM4ViM|type=Animation|image=",
+      "name=Miracles of Jesus|desc=New Testament|author=Superbook|host=YouTube|id=uZTHwqj0Bkk|type=Animation|image=",
+      "name=The Last Supper|desc=New Testament|author=Superbook|host=YouTube|id=9Edfb_faOb0|type=Animation|image=",
+      "name=He is Risen|desc=New Testament|author=Superbook|host=YouTube|id=3F0rt2AiqJY|type=Animation|image=",
+      "name=Paul - Road to Damascus|desc=New Testament|author=Superbook|host=YouTube|id=ogDArF83p8I|type=Animation|image=",
+      "name=The Final Battle|desc=New Testament|author=Superbook|host=YouTube|id=ycSy-kmtM4Q|type=Animation|image=",
+      "name=Jonah|desc=Old Testament|author=Superbook|host=YouTube|id=YkC2MKfI5Gk|type=Animation|image=",
+      "name=Joseph|desc=And Pharaoh's Dream|author=Superbook|host=YouTube|id=1VENAMIch84|type=Animation|image=",
+      "name=The Fiery Furnace|desc=Shadrach, Meshach, Abednego|author=Superbook|host=YouTube|id=bFhmFzmW40I|type=Animation|image=",
+      "name=Rahab|desc=And The Walls of Jericho|author=Superbook|host=YouTube|id=F7sm4tSS7IE|type=Animation|image=",
+      "name=Esther|desc=For Such a Time as This|author=Superbook|host=YouTube|id=q94wBYdMwtE|type=Animation|image=",
+      "name=John the Baptist|desc=New Testament|author=Superbook|host=YouTube|id=_d4KeGaTa9U|type=Animation|image=",
+      "name=Noah & the Ark|desc=Old Testament|author=Superbook|host=YouTube|id=t1p5ocaJzTM|type=Animation|image=",
+      "name=Gideon|desc=Old Testament|author=Superbook|host=YouTube|id=StowZD2JvZw|type=Animation|image=",
+      "name=In the Beginning|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=6cvA9nIRy5A|type=Animation|image=",
+      "name=Abraham|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=8UbeJSOQsHQ|type=Animation|image=",
+      "name=Moses|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=E1SztIhPXtg|type=Animation|image=",
+      "name=The Exodus|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=QPxjlOr7hro|type=Animation|image=",
+      "name=The Land of Canaan|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=eZT8CMbznB4|type=Animation|image=",
+      "name=Elijah & Elisha|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=0OHvyS_DJ_I|type=Animation|image=",
+      "name=Babylon|desc=Old Testament|author=Bible Animation Series|host=YouTube|id=me6HsPd85r0|type=Animation|image=",
+      "name=Birth|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=YISebgzy0SI|type=Animation|image=",
+      "name=Early Ministry|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=W5oJ3pT6VXA|type=Animation|image=",
+      "name=Miracles & Parables|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=AqmBaJNLvAk|type=Animation|image=",
+      "name=Crucifixion & Death|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=Cy0SzlxMVho|type=Animation|image=",
+      "name=Burial & Resurrection|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=MEWdbYu94wQ|type=Animation|image=",
+      "name=The Gospel|desc=Of Jesus Christ|author=Bible Animation Series|host=YouTube|id=SN3Oa8867dM|type=Animation|image=",
+      "name=Pharisee & Tax Collector|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=Ufe6zouTq8g|type=Animation|image=",
+      "name=The Lost Son|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=mLI2zqMU6Ww|type=Animation|image=",
+      "name=Jesus Heals the Paralytic|desc=New Testament|author=RodTheNey|host=YouTube|id=0LqHYkGU4Zg|type=Animation|image=",
+      "name=Following Jesus|desc=New Testament|author=RodTheNey|host=YouTube|id=eKzGAlBvWP8|type=Animation|image=",
+      "name=The Good Samaritan|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=Dr0Vn5QBMtM|type=Animation|image=",
+      "name=Wise & Foolish Builders|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=CXWHLB1f6_U|type=Animation|image=",
+      "name=The Talents|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=bbPKhYBaWRg|type=Animation|image=",
+      "name=The Lost Sheep|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=tyWZeOlaRo4|type=Animation|image=",
+      "name=The Sower|desc=Parable of Jesus|author=RodTheNey|host=YouTube|id=V9IOhGPrRvY|type=Animation|image=",
+      "name=Overview|desc=Old Testament|author=The Bible Project|host=YouTube|id=ALsluAKBZ-c|type=Comic|image=",
+      "name=Genesis 1-11|desc=Old Testament|author=The Bible Project|host=YouTube|id=GQI72THyO5I|type=Comic|image=",
+      "name=Genesis 12-50|desc=Old Testament|author=The Bible Project|host=YouTube|id=F4isSyennFo|type=Comic|image=",
+      "name=Exodus 1-18|desc=Old Testament|author=The Bible Project|host=YouTube|id=jH_aojNJM3E|type=Comic|image=",
+      "name=Exodus 19-40|desc=Old Testament|author=The Bible Project|host=YouTube|id=oNpTha80yyE|type=Comic|image=",
+      "name=Leviticus|desc=Old Testament|author=The Bible Project|host=YouTube|id=IJ-FekWUZzE|type=Comic|image=",
+      "name=Numbers|desc=Old Testament|author=The Bible Project|host=YouTube|id=tp5MIrMZFqo|type=Comic|image=",
+      "name=Deuteronomy|desc=Old Testament|author=The Bible Project|host=YouTube|id=q5QEH9bH8AU|type=Comic|image=",
+      "name=Bible Study|desc=Study Resources|author=Clarence Larkin|host=PDF|id=1T-SrgO3Z_uzczLDxIj7MTa5UzaU2g2wO|type=E-Book|image=larkin-bible-study.jpg",
     ]
 
-    this.hosts = {
-      youtube: 'https://firebasestorage.googleapis.com/v0/b/learn-dt.appspot.com/o/youtube.png?alt=media&token=670a7052-114e-4d5e-a757-ed51ba7bbfcb'
-    }
+    // this.src = {
+    //   YouTube: id => `https://www.youtube.com/embed/${id}`,
+    //   PDF: id => `https://drive.google.com/file/d/${id}/preview`
+    // }
+
+    // this.thumbnail = {
+    //   YouTube: datum => `https://img.youtube.com/vi/${datum.id}/0.jpg`,
+    //   PDF: datum => `./images/${datum.image}`
+    // }
 
     this.thumbnails = document.querySelector('.-thumbnails')
-    this.youTubeIframe = document.querySelector('.-pane iframe')
+    this.iframe = document.querySelector('.-pane iframe')
     this.pane = document.querySelector('.-pane')
   }
 
@@ -43,14 +95,30 @@ class Catalog {
     return replacePercnt.toLowerCase().split(' ').join('-')
   }
 
+  srcs(datum) {
+    var json = {
+      YouTube: {
+        iframe: `https://www.youtube.com/embed/${datum.id}`,
+        thumbnail: `https://img.youtube.com/vi/${datum.id}/0.jpg`,
+      },
+      PDF: {
+        iframe: `https://drive.google.com/file/d/${datum.id}/preview`,
+        thumbnail: `./images/${datum.image}`
+      }
+    }
+    return json[datum.host]
+  }
+
   build() {
     var html = ''
     this.expand().map(datum => {
       var identifier = `${datum.name} ${datum.desc} ${datum.author}`
       // var src = `${this.imageUrl}${datum.image}?alt=media&token=${datum.imagetoken}`
-      var src = `https://img.youtube.com/vi/${datum.id}/0.jpg`
+      // var src = this.thumbnail[datum.host](datum)
 
-      html += `<div class="-mku -inlineblock -vatop -posrel" id="${this.id(identifier)}" data-id="${datum.id}">
+      var src = this.srcs(datum).thumbnail
+
+      html += `<div class="-mku -inlineblock -vatop -posrel" id="${this.id(identifier)}" data-id="${datum.id}" data-host="${datum.host}">
         <div class="-img -posrel">
           <span class="-posabs -type">${datum.type}</span>
           <img data-src="${src}" src="${src}"  alt="${identifier}" />
@@ -71,10 +139,7 @@ class Catalog {
 
   appendListeners() {
     var mkus = document.querySelectorAll('.-mku')
-    mkus.forEach(mku => {
-      this.ctaListener(mku)
-      // mku.addEventListener('click', () => { this.changeYouTubeVideo(mku) })
-    })
+    mkus.forEach(mku => this.ctaListener(mku) )
     return this
   }
 
@@ -91,14 +156,16 @@ class Catalog {
     if (className === '-exercise') fn.add('active')
     else {
       fn.remove('active')
-      this.changeYouTubeVideo(mku)
+      this.changeIframeSrc(mku)
     }
   }
 
-  changeYouTubeVideo(mku) {
-    var youTubeId = mku.getAttribute('data-id')
-    var iframeSrc = `https://www.youtube.com/embed/${youTubeId}`
-    this.youTubeIframe.setAttribute('src', iframeSrc)
+  changeIframeSrc(mku) {
+    var id = mku.getAttribute('data-id')
+    var host = mku.getAttribute('data-host')
+
+    // this.iframe.setAttribute('src', this.src[host](id))
+    this.iframe.setAttribute('src', this.srcs({ id, host }).iframe)
   }
   
   expand() {
