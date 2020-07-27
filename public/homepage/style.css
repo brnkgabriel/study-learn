@@ -1,0 +1,241 @@
+*,*::before,*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(.075, .82, .165, 1)
+}
+
+:root {
+  --bg-color: #f5f5f5
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.9em;
+}
+
+.-header {
+  box-shadow: 0 4px 4px -4px rgba(0,0,0,0.12);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.-header > * {
+  line-height: 72px;
+}
+
+.-posrel {
+  position: relative;
+}
+
+.-posabs {
+  position: absolute;
+}
+
+.-row {
+  margin: 17px 0;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.05);
+}
+
+.-row {
+}
+
+.-inlineblock {
+  display: inline-block;
+}
+
+.-vamiddle {
+  vertical-align: middle;
+}
+
+.-vatop {
+  vertical-align: top;
+}
+
+
+.-header {
+  height: 72px;
+}
+
+.-header .-container {
+  height: 100%;
+}
+
+.-header .-logo {
+
+}
+.-header .-search {
+
+}
+.-header .-login {
+
+}
+.-header .-help {
+
+}
+
+
+.-main {
+
+}
+.-main .-container {
+}
+
+.-row.-flyout-sliders {
+  height: 384px;
+}
+
+.-row {
+  background-color: white;
+}
+
+.-main {
+}
+.-main .-container .-flyout {
+  height: 100%;
+}
+.-main .-container .-flyout.-left {
+  width: 206px;
+}
+.-main .-container .-flyout.-right {
+  width: 218px;
+}
+.-main .-container .-sliders {
+  height: 100%;
+  width: 712px;
+  margin: 0 17px;
+}
+
+.-quicklinks {
+
+}
+.-quicklinks .-quicklink {
+  width: calc(95% / 4);
+  margin: calc(5% / 6);
+  height: 56px;
+}
+
+.-quicklinks .-quicklink:first-child {
+  margin-left: unset;
+}
+
+.-quicklinks .-quicklink:last-child {
+  margin-right: unset;
+}
+
+.-product-floor {
+
+}
+.-product-floor .-header {
+  height: 48px;
+}
+
+.-product-floor .-header > * {
+  line-height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.-product-floor .-header .-title {
+  left: 15px;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.-product-floor .-header .-see-more {
+  right: 15px;
+}
+.-product-floor .-header .-see-more span {
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+}
+.-product-floor .-header .-see-more span:last-child {
+  font-family: monospace;
+  font-size: 1.5em;
+}
+.-product-floor .-products {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+}
+.-product-floor .-products .-product {
+  width: 193px;
+  height: 263px;
+  cursor: pointer;
+}
+
+.-product-floor .-products .-product:hover {
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
+}
+
+.-banner {
+  padding: 8px;
+  width: 1170px;
+  height: 270px;
+  position: relative;
+}
+
+.-banner img {
+  border-radius: 4px;
+}
+
+.-banner .-single {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.-banner .-double {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.-banner .-double:first-child {
+  left: 9px;
+}
+
+.-banner .-double:last-child {
+  right: 9px;
+}
+
+.-banner .-triple {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.-banner .-triple:nth-child(1) {
+  left: 9px;
+}
+
+.-banner .-triple:nth-child(2) {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.-banner .-triple:nth-child(3) {
+  right: 9px;
+}
+
+.-seo {
+  padding: 8px 16px;
+}
+
+.-seo .-title {
+  font-size: 18px;
+  padding: 8px 0;
+}
