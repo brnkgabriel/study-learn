@@ -172,6 +172,7 @@ body {
 .-mku .-details {
   padding: 10px;
   padding-bottom: unset;
+  font-size: 0.85em;
 }
 
 .-mku .-details div {
@@ -210,7 +211,7 @@ body {
   background-color: rgba(0,0,0,0.5);
   padding: 3px 5px;
   line-height: 1;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 600;
   border-radius: 3px;
   z-index: 1;
@@ -310,11 +311,7 @@ body {
   .-banner img.-mobile {
     display: block;
   }
-
-  .-mku .-details {
-    padding-bottom: 10px;
-  }
-
+  
   .-mku .-img {
     max-width: unset;
     width: 100%;
